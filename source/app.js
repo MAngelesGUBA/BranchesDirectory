@@ -8,6 +8,7 @@ const path = require('path');
 const generalRoutes = require('./routes/v1/general');
 const adminRoutes = require('./routes/v1/admin');
 const userRoutes = require('./routes/v1/user');
+const router = express.Router();
 
 //Define una instancia de express
 const app = express();
@@ -23,6 +24,11 @@ setUpMiddleware(app);
 
 //--------------------------------------------------------------------
 //Establece las rutas que seran utilizadas
+
+router.get('/',(req,res)=>{
+  res.response("Express en vercel");
+})
+
 app.use('/v1', generalRoutes);
 app.use('/v1/admin', adminRoutes);
 app.use('/v1/user', userRoutes);

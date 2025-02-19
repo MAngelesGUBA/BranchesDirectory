@@ -14,7 +14,16 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+model Area{
+  id           Int     @id @default(autoincrement())
+  nameArea     String  @db.VarChar(50)
+  extensions           Extension[]
+}
 
-
-
-
+model Extension{
+  id              Int      @id @default(autoincrement())
+  numExtension    Int      @unique
+  nameEmployee    String   @db.VarChar(90)
+  fk_idArea       Int
+  area            Area     @relation(fields:[fk_idArea], references:[id])
+}

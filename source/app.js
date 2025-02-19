@@ -25,7 +25,7 @@ setUpMiddleware(app);
 //Establece las rutas que seran utilizadas
 
 app.get('/',(req,res)=>{
-  res.send("Express en vercel");
+  res.redirect('/v1/home');
 })
 
 app.use('/v1', generalRoutes);

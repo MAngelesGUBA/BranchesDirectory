@@ -1,16 +1,9 @@
 {
   "version":2,
-  "buildCommand":"start",
-  "builds":[
+  "rewrites":[
     {
-      "src":"source/app.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes":[
-    {
-      "src": "/(.*)",
-      "dest":"/v1"
+      "source":"/(.*)",
+      "destination":"/v1"
     }
   ]
 

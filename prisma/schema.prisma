@@ -16,14 +16,15 @@ datasource db {
 
 model Area{
   id           Int     @id @default(autoincrement())
-  nameArea     String  @db.VarChar(50)
+  nameArea     String  @db.Text
   extensions           Extension[]
 }
 
 model Extension{
   id              Int      @id @default(autoincrement())
   numExtension    Int      @unique
-  nameEmployee    String   @db.VarChar(90)
+  nameEmployee    String   @db.Text
+  position        String   @db.Text
   fk_idArea       Int
   area            Area     @relation(fields:[fk_idArea], references:[id])
 }

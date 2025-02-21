@@ -9,7 +9,15 @@ router.get('/manageExtensions',async(req,res)=>{
 
 //CRUD Extenciones ------------------------------
 
-router.get('/obtainExtensions',async(req,res)=>{
+router.get('/getExtensionsByArea',async(req,res)=>{
+  res.response('list -----------------');
+});
+
+router.get('/getExtensionsByPosition',async(req,res)=>{
+  res.response('list -----------------');
+});
+
+router.get('/getExtensionsByEmployee',async(req,res)=>{
   res.response('list -----------------');
 });
 

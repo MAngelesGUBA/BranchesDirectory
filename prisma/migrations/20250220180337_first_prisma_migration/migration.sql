@@ -10,7 +10,8 @@ CREATE TABLE "Area" (
 CREATE TABLE "Extension" (
     "id" SERIAL NOT NULL,
     "numExtension" INTEGER NOT NULL,
-    "nameEmployee" VARCHAR(90) NOT NULL,
+    "nameEmployee" VARCHAR(55) NOT NULL,
+    "position" VARCHAR(45) NOT NULL,
     "fk_idArea" INTEGER NOT NULL,
 
     CONSTRAINT "Extension_pkey" PRIMARY KEY ("id")

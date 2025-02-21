@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Area" ALTER COLUMN "nameArea" SET DATA TYPE TEXT;
+
+-- AlterTable
+ALTER TABLE "Extension" ALTER COLUMN "nameEmployee" SET DATA TYPE TEXT,
+ALTER COLUMN "position" SET DATA TYPE TEXT;
